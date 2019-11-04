@@ -1,6 +1,6 @@
 public class Cards 
 {
-	//variables defined
+	//variables defined thoroughly
 	private int age;
 	private String function;
 	private String name;
