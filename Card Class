@@ -1,0 +1,67 @@
+public class Cards 
+{
+	//variables defined
+	private int age;
+	private String function;
+	private String name;
+	private int cost;
+	private String free;
+	private String freeChain;
+	private String color;
+	private int scope;
+	
+	//constructor
+	public Cards(int age, String function, String name, int cost, String free, String freeChain, String color, int scope)
+	{
+		this.age = age;
+		this.function = function;
+		this.name = name;
+		this.cost = cost;
+		this.free = free;
+		this.freeChain = freeChain;
+		this.color = color;
+		this.scope = scope;
+	}
+	
+	//various get methods
+	public int getAge() 
+	{
+		return age;
+	}
+	
+	public String getFunction()
+	{
+		return function;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public int getCost()
+	{
+		return cost;
+	}
+	
+	public String getF()
+	{
+		return free;
+	}
+	
+	public String getColor()
+	{
+		return color;
+	}
+	
+	public int getScope()
+	{
+		return scope;
+	}
+	
+	public String getFChain()
+	{
+		return freeChain;
+	}
+	
+}
