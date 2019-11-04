@@ -1,14 +1,14 @@
 public class Cards 
 {
 	//variables defined thoroughly
-	private int age;
-	private String function;
-	private String name;
-	private int cost;
-	private String free;
-	private String freeChain;
-	private String color;
-	private int scope;
+	private int age;// this variable will hold the age at which the card is located in
+	private String function;//this variable will dictate what the card is capable of doing
+	private String name;//this variable will hold the name of the card
+	private int cost;//this variable will hold the price at which one must pay to actually get the card
+	private String free;//this variable dictates if the card is free or not
+	private String freeChain;//this variable dictates what card is free when a player is in possession of this card
+	private String color;//  this ariable dictates the color of the card
+	private int scope;  //this variable dictates the scope of given card  
 	
 	//constructor
 	public Cards(int age, String function, String name, int cost, String free, String freeChain, String color, int scope)
