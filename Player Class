@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+
+public class Player 
+{
+	//variables
+	private ArrayList<Cards> hand;
+	private int coins;
+	private int score;
+	private String wonderName;
+	private int activeStages;
+	private ArrayList<String> stage;
+	private String stageFunction;
+	private int warPoints;
+	private String name;
+	
+	//constructor
+	Player(String name)
+	{
+		coins = 0;
+		activeStages = 0;
+		this.name = name;
+		score = 0;
+		hand = new ArrayList<Cards>();
+		warPoints = 0;
+		stage = new ArrayList<String>();
+	}
+	
+	//get and set methods, as well as basic add and calculate score methods
+	public int getScore()
+	{
+		return score;
+	}
+	
+	public void addScore(int x)
+	{
+		score += x;
+	}
+	
+	public void addCoints(int x)
+	{
+		coins += x;
+	}
+	
+	public ArrayList<Cards> getHand()
+	{
+		return hand;
+	}
+	
+	public int getActiveStages()
+	{
+		return activeStages;
+	}
+	
+	public String getWonderName()
+	{
+		return wonderName;
+	}
+	
+	public void setStage()
+	{
+		activeStages += 1;
+	}
+	
+	public ArrayList<String> getStages()
+	{
+		return stage;
+	}
+	
+	public int calcPoints()
+	{
+		return 1;
+	}
+	
+	public void addToHand()
+	{
+		
+	}
+}
