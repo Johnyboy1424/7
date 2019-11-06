@@ -1,1 +1,36 @@
+import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
+public class Deck 
+{
+	private ArrayList<Cards> discard;
+	private ArrayList<Cards> playerDecks;
+	private Map<Integer, ArrayList<Cards>> decks;
+	
+	public Deck()
+	{
+		Scanner keyboard = new Scanner(new File("SevenWondersInput.txt"));
+	}
+	
+	public ArrayList<Cards> getAge(int age)
+	{
+		
+	}
+	
+	public Card getCard(int x)
+	{
+		
+	}
+	
+	public void addToDesignatedAge()
+	{
+		
+	}
+
+	public void cardNameCombination(Card x)
+	{
+		
+	}
+	
+}
