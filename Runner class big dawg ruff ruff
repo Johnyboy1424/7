@@ -1,0 +1,42 @@
+package sevenWonders;
+
+public class ageRunner 
+{
+	private Ages cow;
+	public void main(String[] args)
+	{
+		
+	}
+	public void pickThings()
+	{
+		
+	}
+	public void mouseRelease()
+	{
+		
+	}
+	public void mouseClicked()
+	{
+
+	}
+	public void mousePressed()
+	{
+		
+	}
+	public void mouseEntered()
+	{
+		
+	}
+	public void mouseExited()
+	{
+		
+	}
+	public void update()
+	{
+		
+	}
+	public void victory()
+	{
+		
+	}
+}
