@@ -68,11 +68,56 @@ public class Player
 	
 	public int calcPoints()
 	{
-		return 1;
+		int points = coins % 3;
+		points += hand.size();
+		organizeHand();
+		int i = 0;
+		while(hand.get(i).getColor().equals("blue") || hand.get(i).getColor().equals("green"))
+		{
+			if()
+			i++;
+		}
+		return points;
 	}
 	
 	public void addToHand()
 	{
 		
+	}
+	
+	//organize cards by color via this order: brown, grey, yellow, green, blue, red, purple
+	public void organizeHand()
+	{
+		ArrayList<Cards> tempHand = new ArrayList<Cards>();
+		
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("brown"))
+				tempHand.add(hand.get(counter));
+			
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("grey"))
+				tempHand.add(hand.get(counter));
+			
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("yellow"))
+				tempHand.add(hand.get(counter));
+			
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("green"))
+				tempHand.add(hand.get(counter));
+		
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("blue"))
+				tempHand.add(hand.get(counter));
+		
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("red"))
+				tempHand.add(hand.get(counter));
+			
+		for(int counter = 0; counter < hand.size(); counter++)
+			if(hand.get(counter).getColor().equals("purple"))
+				tempHand.add(hand.get(counter));
+		
+		hand = tempHand;
 	}
 }
