@@ -68,13 +68,33 @@ public class Player
 	
 	public int calcPoints()
 	{
+		//creates points and immediately takes the amount of coins and transfers it to points
 		int points = coins % 3;
+		
+		//adds a point for each card the player has
 		points += hand.size();
+		
+		//organizes the hand
 		organizeHand();
+		
+		//gives points based off each specific cards function
 		int i = 0;
 		while(hand.get(i).getColor().equals("blue") || hand.get(i).getColor().equals("green"))
 		{
-			if()
+			if(hand.get(i).getColor().equals("blue"))
+			{
+				/* creates a variable representing the seventh index in the string for function,
+				the string for function being written in the form 'points:x' where 
+				x is denoted as the number of points for the specific blue card.
+				note that the seventh index is x, and that the 'points:x' form is specific only to blue cards */
+				
+				String x = hand.get(i).getFunction().charAt(7);
+				points += Integer.parseInt(x);
+			}
+			else if(hand.get(i).getColor().equals("green))
+			{
+				//requires the rules regarding science cards
+			}
 			i++;
 		}
 		return points;
