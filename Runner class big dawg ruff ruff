@@ -1,42 +1,89 @@
-package sevenWonders;
+import java.awt.Dimension;
+import java.awt.Insets;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class ageRunner 
+import javax.swing.JFrame;
+
+import java.io.*;
+import java.util.*;
+
+public class AgesRunner extends JFrame implements MouseListener
 {
-	private Ages cow;
-	public void main(String[] args)
+	private boolean gameOver;
+	private Graphics graphics;
+	
+	public void main()
+	{
+		AgesRunner testGame = new AgesRunner();
+	}
+	
+	public AgesRunner()
+	{
+		Insets framing = getInsets();
+		
+		int width = graphics.getWidth() + (framing.left + framing.right);
+		
+		int length = graphics.getHeight() + (framing.top + framing.bottom);
+		
+		setPreferredSize(new Dimension(width, length));
+		setLayout(null);
+		add(graphics);
+		pack();
+		setVisible(true);
+		addMouseListener(this);
+		
+		gameOver = false;
+		
+		play();
+	}
+	
+	public void play()
 	{
 		
 	}
+	
 	public void pickThings()
 	{
 		
 	}
-	public void mouseRelease()
+	
+	@Override
+	
+	public void mouseClicked(MouseEvent e)
 	{
 		
 	}
-	public void mouseClicked()
+	
+	@Override
+	
+	public void mousePressed(MouseEvent e)
 	{
+		
+	}
+	
+	@Override
+	
+	public void mouseEntered(MouseEvent e)
+	{
+		
+	}
+	
+	public void mouseReleased(MouseEvent e)
+	{
+		int xBoundary = e.getX();
+		int yBoundary = e.getY();
+		
+	}
 
-	}
-	public void mousePressed()
+	@Override
+	
+	public void mouseExited(MouseEvent e) 
 	{
-		
-	}
-	public void mouseEntered()
-	{
-		
-	}
-	public void mouseExited()
-	{
-		
-	}
-	public void update()
-	{
-		
-	}
-	public void victory()
-	{
-		
+			
 	}
 }
+
