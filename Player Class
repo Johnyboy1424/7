@@ -74,6 +74,9 @@ public class Player
 		//adds a point for each card the player has
 		points += hand.size();
 		
+		//adds points garnered from warring
+		points += warPoints;
+		
 		//organizes the hand
 		organizeHand();
 		
