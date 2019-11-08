@@ -15,6 +15,7 @@ public class AgesRunner extends JFrame implements MouseListener
 {
 	private boolean gameOver;
 	private Graphics graphics;
+	private Ages agesObj;
 	
 	public void main()
 	{
@@ -43,12 +44,34 @@ public class AgesRunner extends JFrame implements MouseListener
 	
 	public void play()
 	{
-		
+		ages.set();
+		graphics.gameStateStatus(ages.getGameState());
 	}
 	
 	public void pickThings()
 	{
+		ages.switchTurns();
+		System.out.println();
+		play();
+	}
+	
+	public void playCard(int i)
+	{
+		ages.playCard(i);
 		
+		if(ages.checkWin() >= 0)
+		{
+			gameOver = true;
+			victory();
+			return;
+		}
+		
+		else if(ages.getCurrentPlayer().determineWin())
+		{
+			grahics.addMove("Player " + (board.getTurn() + 1) + "VICTORY");
+		}
+		
+		turn();
 	}
 	
 	@Override
@@ -86,4 +109,3 @@ public class AgesRunner extends JFrame implements MouseListener
 			
 	}
 }
-
