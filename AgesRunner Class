@@ -68,10 +68,29 @@ public class AgesRunner extends JFrame implements MouseListener
 		
 		else if(ages.getCurrentPlayer().determineWin())
 		{
-			grahics.addMove("Player " + (board.getTurn() + 1) + "VICTORY");
+			grahics.addMove("Player " + (board.getTurn() + 1) + "VICTORY");//log
 		}
 		
 		turn();
+	}
+	
+	public void drawCard()
+	{
+		String move = ages.drawnCard();
+		
+		grpahics.addMove(move);
+		
+		String playersCard = move.substring(move.lastIndexOf(" ") + 1);
+		
+		turn();
+	}
+	
+	public void victory()
+	{
+		graphics.setWin();
+		graphics.repaint();
+		
+		System.out.println("Player " + (ages.checkWin()+1) + "has won the game");
 	}
 	
 	@Override
