@@ -91,10 +91,10 @@ public class Player
 				x is denoted as the number of points for the specific blue card.
 				note that the seventh index is x, and that the 'points:x' form is specific only to blue cards */
 				
-				String x = hand.get(i).getFunction().charAt(7);
-				points += Integer.parseInt(x);
+				char x = hand.get(i).getFunction().charAt(7);
+				points += Character.getNumericValue(x);
 			}
-			else if(hand.get(i).getColor().equals("green))
+			else if(hand.get(i).getColor().equals("green"))
 			{
 				//requires the rules regarding science cards
 			}
