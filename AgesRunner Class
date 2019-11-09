@@ -13,9 +13,9 @@ import java.util.*;
 
 public class AgesRunner extends JFrame implements MouseListener
 {
-	private boolean gameOver;
-	private Graphics graphics;
-	private Ages agesObj;
+	private boolean gameOver; //checks if the game has ended
+	private Graphics graphics; // instance of the graphics class, which contains all of the actual graphical elements for the UI
+	private Ages agesObj; // instance of the ages class, which is the equivalent of a board class; contains all methods regarding general play
 	
 	public void main()
 	{
@@ -24,68 +24,68 @@ public class AgesRunner extends JFrame implements MouseListener
 	
 	public AgesRunner()
 	{
-		Insets framing = getInsets();
+		Insets framing = getInsets(); // creates Insets for the UI
 		
-		int width = graphics.getWidth() + (framing.left + framing.right);
+		int width = graphics.getWidth() + (framing.left + framing.right); // width
 		
-		int length = graphics.getHeight() + (framing.top + framing.bottom);
+		int length = graphics.getHeight() + (framing.top + framing.bottom); // length
 		
-		setPreferredSize(new Dimension(width, length));
-		setLayout(null);
-		add(graphics);
-		pack();
-		setVisible(true);
-		addMouseListener(this);
+		setPreferredSize(new Dimension(width, length)); //setting size; might need safeguard for adjusted resolution ???
+		setLayout(null); // layout
+		add(graphics); // add the Graphics to the UI
+		pack(); 
+		setVisible(true); // allows Graphics portion of UI to actually be seen
+		addMouseListener(this); // adds mouseListener so clicking elements actually responds to set boundaries
 		
-		gameOver = false;
+		gameOver = false; // sets gameOver to a default 'false' setting
 		
-		play();
+		play(); // runs play method which, well, plays the game
 	}
 	
 	public void play()
 	{
-		ages.set();
-		graphics.gameStateStatus(ages.getGameState());
+		ages.set(); // set method in ages that creates all the core functions of the game
+		graphics.gameStateStatus(ages.getGameState()); // gameStateStatus is a method that runs all the auxiliary or core methods of the program to make sure they work as intended
 	}
 	
 	public void pickThings()
 	{
-		ages.switchTurns();
+		ages.switchTurns(); //switches the current turn of the game; implement switchHand method as well? 
 		System.out.println();
-		play();
+		play(); // run play again, after switching turns
 	}
 	
 	public void playCard(int i)
 	{
-		ages.playCard(i);
+		ages.playCard(i); // recurse
 		
 		if(ages.checkWin() >= 0)
 		{
-			gameOver = true;
+			gameOver = true; // check for a victory
 			victory();
 			return;
 		}
 		
 		else if(ages.getCurrentPlayer().determineWin())
 		{
-			grahics.addMove("Player " + (board.getTurn() + 1) + "VICTORY");//log
+			grahics.addMove("Player " + (ages.getTurn() + 1) + "VICTORY");//log
 		}
 		
 		turn();
 	}
 	
-	public void drawCard()
+	public void drawCard() // draws a card on the UI; very simplistic, intended to make a skeleton for graphics and age class methods
 	{
 		String move = ages.drawnCard();
 		
-		grpahics.addMove(move);
+		graphics.addMove(move);
 		
 		String playersCard = move.substring(move.lastIndexOf(" ") + 1);
 		
 		turn();
 	}
 	
-	public void victory()
+	public void victory() // setWin() in Graphics determines the victory status of the game, repaints afterwards and displays winner message
 	{
 		graphics.setWin();
 		graphics.repaint();
@@ -114,11 +114,28 @@ public class AgesRunner extends JFrame implements MouseListener
 		
 	}
 	
-	public void mouseReleased(MouseEvent e)
+	public void mouseReleased(MouseEvent event) // occurs once the mouse is released; not final and needs data from the Graphics class UI
 	{
-		int xBoundary = e.getX();
-		int yBoundary = e.getY();
+		int xBoundary = event.getX();
+		int yBoundary = event.getY();
 		
+		if(gameOver == false)
+		{
+			if(yBoundary >= /*coordinate*/ && yBoundary <= /*coordinate*/) 
+			{
+				if(xBoundary >= /*coordinate*/ && xBoundary <= /*coordinate*/  && graphics.getPage() > 0)
+				{
+					graphics.removePage();
+				}
+				
+				else if(xBoundary >= /*coordinate*/ && xBoundary <= /*coordinate*/  && graphics.getPage() < graphics.getAllPages() - 1)
+				{
+					graphics.addPage();
+				}
+			}
+		}	
+	
+		graphics.repaint();
 	}
 
 	@Override
@@ -127,4 +144,20 @@ public class AgesRunner extends JFrame implements MouseListener
 	{
 			
 	}
-}
+	
+	public int checkIndex(int x, int y) // set y bounds for checking if element is in designated spot
+	{
+		for(int i = 0; i < 10; i++)
+		{
+			int a = i * 140 /*random test number(s) from blank UI, adjust to fit actual UI*/ + 10;
+			
+			if(x >= a && x <= a + 130 /*random test number(s) from blank UI, adjust to fit actual UI*/
+			&& y >= (int) (getHeight() * .69 /*random test number(s) from blank UI, adjust to fit actual UI*/) + 20
+			&& y <= (int) (getHeight() * .75 /*random test number(s) from blank UI, adjust to fit actual UI*/) + 200)
+			{	
+				return i;
+			}
+		}
+		
+		return -1;
+	}
