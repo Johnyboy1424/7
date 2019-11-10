@@ -1,0 +1,89 @@
+Wonder Text File:
+
+alexandriaA|glass|stone stone|ore ore|glass glass|v v v|clay/ore/wood/stone|v v v v v v v
+babylonA|clay|clay clay|wood wood wood|clay clay clay clay|v v v|sci1/sci2/sci3|v v v v v v v
+ephesosA|papyrus|stone stone|wood wood|papyrus papyrus|v v v|coin coin coin coin coin coin coin coin coin|v v v v v v v
+gizahA|stone|stone stone|wood wood wood|papyrus papyrus|v v v|coin coin coin coin coin coin coin coin coin|v v v v v v v
+halikarnassosA|loom|clay clay|ore ore ore|loom loom|v v v|freedisc|v v v v v v v
+olympiaA|wood|wood wood|stone stone|ore ore|v v v|free|v v v v v v v
+rhodosA|ore|wood wood|clay clay clay|ore ore ore ore|v v v|m m|v v v v v v v
+
+Guilds Text File:
+
+3|purple|workersguild|both brown v|ore ore clay stone wood|-|-|-
+3|purple|craftmensguild|both silver v v|ore ore stone stone|-|-|-
+3|purple|tradersguild|both gold v|loom papyrus glass|-|-|-
+3|purple|philosophersguild|both green v|clay clay clay loom papyrus|-|-|-
+3|purple|spyguild|both red v|clay clay clay glass|-|-|-
+3|purple|strategyguild|both -1 v|ore ore stone loom|-|-|-
+3|purple|shipownersguild|self brown/silver/purple v|wood wood wood papyrus glass|-|-|-
+3|purple|scientistsguild|sci1/sci2/sci3|wood wood ore ore papyrus|-|-|-
+3|purple|magistratesguild|both blue v|wood wood wood stone loom|-|-|-
+3|purple|buildersguild|all wonder v|stone stone clay clay glass|-|-|-
+
+Age1 Text File:
+
+1|brown|lumberyard|wood|-|-|-|-
+1|brown|stonepit|stone|-|-|-|-
+1|brown|claypool|clay|-|-|-|-
+1|brown|orevein|ore|-|-|-|-
+1|brown|claypit|clay/ore|coin|-|-|-
+1|brown|timberyard|stone/wood|coin|-|-|-
+1|silver|loom|loom|-|-|-|-
+1|silver|glassworks|glass|-|-|-|-
+1|silver|press|papyrus|-|-|-|-
+1|blue|baths|3|stone|-|aqueduct|-
+1|blue|altar|2|-|-|temple|-
+1|blue|theater|2|-|-|statue|-
+1|gold|easttradingpost|right clay stone ore wood|-|-|forum|-
+1|gold|westtradingpost|left clay stone ore wood|-|-|forum|-
+1|gold|marketplace|both glass loom papyrus|-|-|caravansery|-
+1|red|stockade|1|wood|-|-|-
+1|red|barracks|1|ore|-|-|-
+1|red|guardtower|1|clay|-|-|-
+1|green|apothecary|sci1|loom|-|stables|dispensary
+1|green|workshop|sci2|glass|-|laboratory|archeryrange
+1|green|scriptorium|sci3|papyrus|-|courthouse|library
+
+Age2 Text File:
+
+2|brown|sawmill|wood wood|coin|-|-|-
+2|brown|quarry|stone stone|coin|-|-|-
+2|brown|brickyard|clay clay|coin|-|-|-
+2|brown|foundry|ore ore|coin|-|-|-
+2|silver|loom|loom|-|-|-|-
+2|silver|glassworks|glass|-|-|-|-
+2|silver|press|papyrus|-|-|-|-
+2|blue|aqueduct|5|stone stone stone|baths|-|-
+2|blue|temple|3|wood clay glass|altar|pantheon|-
+2|blue|statue|4|ore ore wood|theater|gardens|-
+2|blue|courthouse|4|clay clay loom|scriptorium|-|-
+2|gold|forum|loom/glass/papyrus|clay clay|easttradingpost westtradingpost|haven|-
+2|gold|caravansery|clay/stone/ore/wood|wood wood|baths|marketplace|lighthouse
+2|gold|vineyard|all brown coin|-|-|-|-
+2|red|walls|2|silver silver silver|-|fortifications|-
+2|red|stables|2|ore clay wood|apothecary|-|-
+2|red|archeryrange|2|wood wood ore|workshop|-|-
+2|green|dispensary|sci1|ore ore glass|apothecary|lodge|arena
+2|green|laboratory|sci2|clay clay papyrus|workshop|observatory|siegeworkshop
+2|green|library|sci3|stone stone loom|scriptorium|senate|university
+2|green|school|sci3|wood papyrus|-|academy|study
+
+Age3 Text File:
+
+3|blue|pantheon|7|clay clay ore papyrus loom glass|temple|-|-
+3|blue|gardens|5|clay clay wood|statue|-|-
+3|blue|townhall|6|stone stone ore glass|-|-|-
+3|blue|palace|8|clay wood ore stone glass papyrus loom|-|-|-
+3|blue|senate|6|wood wood ore stone|library|-|-
+3|gold|haven|self brown coin v|wood ore loom|forum|-|-
+3|gold|lighthouse|self gold coin v|stone glass|caravansery|-|-
+3|gold|arena|self wonder coin coin coin v|stone stone ore|dispensary|-|-
+3|red|fortifications|3|ore ore ore stone|walls|-|-
+3|red|arsenal|3|wood wood ore loom|-|-|-
+3|red|siegeworkshop|3|clay clay clay wood|laboratory|-|-
+3|green|lodge|sci1|clay clay loom papyrus|dispensary|-|-
+3|green|observatory|sci2|ore ore glass loom|laboratory|-|-
+3|green|university|sci3|wood wood papyrus glass|library|-|-
+3|green|academy|sci1|stone stone stone glass|school|-|-
+3|green|study|sci2|wood papyrus loom|school|-|-
