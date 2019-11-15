@@ -1,0 +1,143 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+public class WonderGraphics extends JPanel{
+	private boolean isReversed, gamePlaying;
+	private BufferedImage img, cardBack, tempImg, player1, bg;
+	private int player, age; 
+	private int[] numbers  = {7, 7, 7, 7};
+	private ArrayList<Card> list;
+	private ArrayList<Wonder> wlist;
+	private int start,stop,count,remainder,temp,counter;
+	public WonderGraphics() throws IOException{
+		player1 = ImageIO.read(getClass().getResource("profile.png"));
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		setSize(screenSize.width, screenSize.height);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+		cardBack = ImageIO.read(getClass().getResource("card_back.png"));
+		age = 1;
+		list = new ArrayList<Card>();
+		wlist = new ArrayList<Wonder>();
+		count=1;
+		start=0;
+		stop=list.size();
+		gamePlaying = true;
+		isReversed = false;
+	}
+	public void paintComponent(Graphics g) {
+		if(gamePlaying != true) {
+			super.paintComponent(g);
+			g.setColor(Color.RED);
+			g.setFont(new Font("TimesRoman", Font.BOLD, 20));
+			g.drawString("PLAYER "+(player+1)+" HAS WON", getWidth()/2-20, getHeight()/2);
+		}
+		else {
+			counter = 0;
+			super.paintComponent(g);
+			g.drawImage(bg, getHeight()/2, getWidth()/2, getWidth(), getHeight(), null);
+			g.setColor(Color.BLACK);
+			g.setFont(new Font("default", Font.BOLD, 50));
+			g.drawString("AGE " + age, getWidth()/2-200, 70);
+			g.setFont(new Font("default", Font.BOLD, 14));
+			for(int i = 0; i < 2; i++)
+			{
+				g.drawImage(player1, 30, 40+i*200, 100, 100, null);
+				g.drawImage(player1, 1500, 40+i*200, 100, 100, null);
+			}
+			g.drawString("Current Player: "+(player+1), getWidth()/2 - 65 , getHeight() * 2 / 3 - 50);
+			g.drawImage(cardBack, getWidth()/2 + 15, getHeight()/2 - 182/2, null);
+			g.drawImage(img, getWidth()/2 - 150, getHeight()/2 - 182/2, null);
+			for(int i=start,j=1;i<stop;i++,j++) {
+				try {
+					setTempImg(list.get(i).toString());
+				}
+				catch(IOException e) {
+					System.out.println("Error");
+				}
+				catch(IndexOutOfBoundsException e) {
+					break;
+				}
+				g.drawImage(tempImg, 130*(j) + 380, getHeight()/2 + 200, null);
+				counter++;
+			}
+		}
+	}
+	public void setReverse(boolean b) {	
+		isReversed = b;
+	}
+	public void setTopImg(BufferedImage img) {	
+		this.img = img;
+	}
+	public void setTurn(int t) {
+		player = t;
+	}
+	public void setList(ArrayList<Card> l) {
+		list.clear();
+		for(int i=0;i<l.size();i++)
+			list.add(l.get(i));
+		temp = list.size()/7;
+		remainder = list.size()%7;
+		if(remainder>0)
+			temp++;
+		start = 0;
+		stop  = list.size();
+		count=1;
+	}
+	public void updateNumbers(int p1, int p2, int p3, int p4) {
+		numbers[0] = p1;
+		numbers[1] = p2;
+		numbers[2] = p3;
+		numbers[3] = p4;
+	}
+	public void setTempImg(String n)throws IOException {
+		tempImg = ImageIO.read(getClass().getResource(n));
+	}
+	public void nextAge()
+	{
+		age++;
+	}
+	public void scrollHand(String s) {
+		if(s.equals("next") && count!=temp) {
+			start = 7 *count;
+			count++;
+			stop = start + 8;
+			repaint();
+		}
+		else if(s.equals("previous") && count!=1) {
+			start = 7 * (count-2);
+			if(start>0) {
+				stop = start + 8;
+			}
+			else {
+				stop = start + 7;
+			}
+			count--;
+			repaint();
+		}
+		else {
+			return;
+		}
+	} 
+	public int getCounter() {
+		return counter;
+	}
+	public int getStart() {
+		return start;
+	}
+	public int getStop() {
+		return stop;
+	}
+	public void winner() {
+		gamePlaying = false;
+	}
+}
