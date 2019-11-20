@@ -36,7 +36,8 @@ public class Player
 		score += x;
 	}
 	
-	public void addCoints(int x)
+	public void addCoin
+	s(int x)
 	{
 		coins += x;
 	}
