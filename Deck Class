@@ -1,26 +1,42 @@
+package sevenWonders;
 import java.util.ArrayList;
 import java.io.*;
 import java.util.*;
-
+import java.util.*;
 public class Deck 
 {
 	private ArrayList<Cards> discard;
 	private ArrayList<Cards> playerDecks;
 	private Map<Integer, ArrayList<Cards>> decks;
 	
-	public Deck()
+	public Deck() throws IOException
 	{
 		Scanner keyboard = new Scanner(new File("SevenWondersInput.txt"));
+		String line = keyboard.nextLine();
+		System.out.print(line);
+		String[] info = line.split("/");
+		for(int x = 0;x<info.length;x++)
+		{
+			System.out.print(info[x]);
+		}
+		/*while(keyboard.hasNextLine())
+		{
+			String line = keyboard.nextLine();
+			String[] info = new String[8];
+			info = line.split(".");
+			
+		}*/
+		
 	}
 	
 	public ArrayList<Cards> getAge(int age)
 	{
-		
+		return discard;
 	}
 	
-	public Card getCard(int x)
+	public Cards getCard(int x)
 	{
-		
+		return playerDecks.get(x);
 	}
 	
 	public void addToDesignatedAge()
@@ -28,7 +44,7 @@ public class Deck
 		
 	}
 
-	public void cardNameCombination(Card x)
+	public void cardNameCombination(Cards x)
 	{
 		
 	}
