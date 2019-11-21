@@ -6,12 +6,14 @@ public class Player
 	private ArrayList<Cards> hand;
 	private int coins;
 	private int score;
+	private itn turnCounter;
 	private String wonderName;
 	private int activeStages;
 	private ArrayList<String> stage;
 	private String stageFunction;
 	private int warPoints;
 	private String name;
+	private Wonder playerWonder;
 	
 	//constructor
 	Player(String name)
@@ -129,6 +131,7 @@ public class Player
 	}
 	
 	//organize cards by color via this order: brown, grey, yellow, green, blue, red, purple
+	
 	public void organizeHand()
 	{
 		ArrayList<Cards> tempHand = new ArrayList<Cards>();
@@ -167,5 +170,10 @@ public class Player
 	public String getName()
 	{
 		return name;
+	}
+	
+	public int getTurn()
+	{
+		return turnCounter;
 	}
 }
