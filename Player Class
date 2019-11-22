@@ -6,11 +6,7 @@ public class Player
 	private ArrayList<Cards> hand;
 	private int coins;
 	private int score;
-	private itn turnCounter;
-	private String wonderName;
-	private int activeStages;
-	private ArrayList<String> stage;
-	private String stageFunction;
+	private int turnCounter;
 	private int warPoints;
 	private String name;
 	private Wonder playerWonder;
