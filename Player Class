@@ -16,7 +16,7 @@ public class Player
 	private Wonder playerWonder;
 	
 	//constructor
-	Player(String name)
+	Player(String name, Wonder playerWonder)
 	{
 		coins = 0;
 		activeStages = 0;
@@ -25,6 +25,7 @@ public class Player
 		hand = new ArrayList<Cards>();
 		warPoints = 0;
 		stage = new ArrayList<String>();
+		this.playerWonder = playerWonder;
 	}
 	
 	//get and set methods, as well as basic add and calculate score methods
