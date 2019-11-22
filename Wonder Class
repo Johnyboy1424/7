@@ -1,0 +1,20 @@
+public class Wonder 
+{
+	private String name;
+	private int stagesActivated;
+	private String function;
+	
+	public Wonder(String name)
+	{
+		this.name = name;
+		stagesActivated = 0;
+		function = "";
+	}
+	
+	//activates the next stage of the wonder
+	public void actvNxtStg()
+	{
+		stagesActivated++;
+	}
+	
+}
