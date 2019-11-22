@@ -19,12 +19,10 @@ public class Player
 	Player(String name, Wonder playerWonder)
 	{
 		coins = 0;
-		activeStages = 0;
 		this.name = name;
 		score = 0;
 		hand = new ArrayList<Cards>();
 		warPoints = 0;
-		stage = new ArrayList<String>();
 		this.playerWonder = playerWonder;
 	}
 	
