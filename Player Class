@@ -48,24 +48,9 @@ public class Player
 		return hand;
 	}
 	
-	public int getActiveStages()
+	public Wonder getWonder()
 	{
-		return activeStages;
-	}
-	
-	public String getWonderName()
-	{
-		return wonderName;
-	}
-	
-	public void setStage()
-	{
-		activeStages += 1;
-	}
-	
-	public ArrayList<String> getStages()
-	{
-		return stage;
+		return playerWonder;
 	}
 	
 	public int calcPoints()
