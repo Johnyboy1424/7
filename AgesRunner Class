@@ -11,24 +11,24 @@ import javax.swing.JFrame;
 import java.io.*;
 import java.util.*;
 
-public class AgesRunner extends JFrame implements MouseListener
+public class AgeRunner extends JFrame implements MouseListener
 {
 	private boolean gameOver; //checks if the game has ended
-	private Graphics graphics; // instance of the graphics class, which contains all of the actual graphical elements for the UI
+	private WonderGraphics graphics; // instance of the graphics class, which contains all of the actual graphical elements for the UI
 	private Ages agesObj; // instance of the ages class, which is the equivalent of a board class; contains all methods regarding general play
 	
 	public void main()
 	{
-		AgesRunner testGame = new AgesRunner();
+		AgeRunner testGame = new AgeRunner();
 	}
 	
-	public AgesRunner()
+	public void AgesRunner()
 	{
 		Insets framing = getInsets(); // creates Insets for the UI
 		
-		int width = graphics.getWidth() + (framing.left + framing.right); // width
+		int width = WonderGraphics.getWidth() + (framing.left + framing.right); // width
 		
-		int length = graphics.getHeight() + (framing.top + framing.bottom); // length
+		int length = WonderGraphics.getHeight() + (framing.top + framing.bottom); // length
 		
 		setPreferredSize(new Dimension(width, length)); //setting size; might need safeguard for adjusted resolution ???
 		setLayout(null); // layout
@@ -44,31 +44,31 @@ public class AgesRunner extends JFrame implements MouseListener
 	
 	public void play()
 	{
-		ages.set(); // set method in ages that creates all the core functions of the game
-		graphics.gameStateStatus(ages.getGameState()); // gameStateStatus is a method that runs all the auxiliary or core methods of the program to make sure they work as intended
+		Ages.set(); // set method in ages that creates all the core functions of the game
+		WonderGraphics.gameStateStatus(Ages.getGameState()); // gameStateStatus is a method that runs all the auxiliary or core methods of the program to make sure they work as intended
 	}
 	
 	public void pickThings()
 	{
-		ages.switchTurns(); //switches the current turn of the game; implement switchHand method as well? 
+		Ages.switchTurns(); //switches the current turn of the game; implement switchHand method as well? 
 		System.out.println();
 		play(); // run play again, after switching turns
 	}
 	
 	public void playCard(int i)
 	{
-		ages.playCard(i); // recurse
+		Ages.playCard(i); // recurse
 		
-		if(ages.checkWin() >= 0)
+		if(Ages.checkWin() >= 0)
 		{
 			gameOver = true; // check for a victory
 			victory();
 			return;
 		}
 		
-		else if(ages.getCurrentPlayer().determineWin())
+		else if(Ages.getCurrentPlayer().determineWin())
 		{
-			grahics.addMove("Player " + (ages.getTurn() + 1) + "VICTORY");//log
+			WonderGraphics.addMove("Player " + (Ages.getTurn() + 1) + "VICTORY");//log
 		}
 		
 		turn();
@@ -76,7 +76,7 @@ public class AgesRunner extends JFrame implements MouseListener
 	
 	public void drawCard() // draws a card on the UI; very simplistic, intended to make a skeleton for graphics and age class methods
 	{
-		String move = ages.drawnCard();
+		String move = Ages.drawnCard();
 		
 		graphics.addMove(move);
 		
@@ -90,7 +90,7 @@ public class AgesRunner extends JFrame implements MouseListener
 		graphics.setWin();
 		graphics.repaint();
 		
-		System.out.println("Player " + (ages.checkWin()+1) + "has won the game");
+		System.out.println("Player " + (Ages.checkWin()+1) + "has won the game");
 	}
 	
 	@Override
@@ -125,17 +125,17 @@ public class AgesRunner extends JFrame implements MouseListener
 			{
 				if(xBoundary >= /*coordinate*/ && xBoundary <= /*coordinate*/  && graphics.getPage() > 0)
 				{
-					graphics.removePage();
+					WonderGraphics.removePage();
 				}
 				
 				else if(xBoundary >= /*coordinate*/ && xBoundary <= /*coordinate*/  && graphics.getPage() < graphics.getAllPages() - 1)
 				{
-					graphics.addPage();
+					WonderGraphics.addPage();
 				}
 			}
 		}	
 	
-		graphics.repaint();
+		WonderGraphics.repaint();
 	}
 
 	@Override
