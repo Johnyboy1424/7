@@ -1,3 +1,9 @@
+Things to Keep in Mind:
+
+-Halicarnassus special mechanics (ability on second stage of Halicarnassus wonder that allows player to dig through discard pile, which includes cards of ALL ages, and pick one card to add to the hand).
+-Log of all concurrent and past actions - ability to scroll up and see earlier actions?
+-Deciding between switching player perspective and repainting or just having a display with all three players, accessible from one UI
+
 7 wonders.
 
 Scheudle Summary:
