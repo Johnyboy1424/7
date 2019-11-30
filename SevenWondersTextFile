@@ -1,61 +1,40 @@
-one.brown.lumberyard.wood.-.-.-.-
-one.brown.stonepit.stone.-.-.-.-
-one.brown.claypool.clay.-.-.-.-
-one.brown.orevein.ore.-.-.-.-
-one.brown.claypit.clay/ore.coin.-.-.-
-one.brown.timberyard.stone/wood.coin.-.-.-
-one.silver.loom.loom.-.-.-.-
-one.silver.glassworks.glass.-.-.-.-
-one.silver.press.papyrus.-.-.-.-
-one.blue.baths.three.stone.-.aqueduct.-
-one.blue.altar.two.-.-.temple.-
-one.blue.theater.two.-.-.statue.-
-one.gold.easttradingpost.right clay stone ore wood.-.-.forum.-
-one.gold.westtradingpost.left clay stone ore wood.-.-.forum.-
-one.gold.marketplace.both glass loom papyrus.-.-.caravansery.-
-one.red.stockade.one.wood.-.-.-
-one.red.barracks.one.ore.-.-.-
-one.red.guardtower.one.clay.-.-.-
-one.green.apothecary.scione.loom.-.stables.dispensary
-one.green.workshop.scitwo.glass.-.laboratory.archeryrange
-one.green.scriptorium.scithree.papyrus.-.courthouse.library
-two.brown.sawmill.wood wood.coin.-.-.-
-two.brown.quarry.stone stone.coin.-.-.-
-two.brown.brickyard.clay clay.coin.-.-.-
-two.brown.foundry.ore ore.coin.-.-.-
-two.silver.loom.loom.-.-.-.-
-two.silver.glassworks.glass.-.-.-.-
-two.silver.press.papyrus.-.-.-.-
-two.blue.aqueduct.5.stone stone stone.baths.-.-
-two.blue.temple.three.wood clay glass.altar.pantheon.-
-two.blue.statue.4.ore ore wood.theater.gardens.-
-two.blue.courthouse.4.clay clay loom.scriptorium.-.-
-two.gold.forum.loom/glass/papyrus.clay clay.easttradingpost westtradingpost.haven.-
-two.gold.caravansery.clay/stone/ore/wood.wood wood.baths.marketplace.lighthouse
-two.gold.vineyard.all brown coin.-.-.-.-
-two.red.walls.two.silver silver silver.-.fortifications.-
-two.red.stables.two.ore clay wood.apothecary.-.-
-two.red.archeryrange.two.wood wood ore.workshop.-.-
-two.green.dispensary.scione.ore ore glass.apothecary.lodge.arena
-two.green.laboratory.scitwo.clay clay papyrus.workshop.observatory.siegeworkshop
-two.green.library.scithree.stone stone loom.scriptorium.senate.university
-two.green.school.scithree.wood papyrus.-.academy.study
-three.blue.pantheon.7.clay clay ore papyrus loom glass.temple.-.-
-three.blue.gardens.5.clay clay wood.statue.-.-
-three.blue.townhall.6.stone stone ore glass.-.-.-
-three.blue.palace.8.clay wood ore stone glass papyrus loom.-.-.-
-three.blue.senate.6.wood wood ore stone.library.-.-
-three.gold.haven.self brown coin v.wood ore loom.forum.-.-
-three.gold.lighthouse.self gold coin v.stone glass.caravansery.-.-
-three.gold.arena.self wonder coin coin coin v.stone stone ore.dispensary.-.-
-three.red.fortifications.three.ore ore ore stone.walls.-.-
-three.red.arsenal.three.wood wood ore loom.-.-.-
-three.red.siegeworkshop.three.clay clay clay wood.laboratory.-.-
-three.green.lodge.scione.clay clay loom papyrus.dispensary.-.-
-three.green.observatory.scitwo.ore ore glass loom.laboratory.-.-
-three.green.university.scithree.wood wood papyrus glass.library.-.-
-three.green.academy.scione.stone stone stone glass.school.-.-
-three.green.study.scitwo.wood papyrus loom.school.-.-
-
-
+one/brown/lumber yard/wood/resource/-/-/-
+one/brown/stone put/stone/resource/-/-/-
+one/brown/clay pool/clay/resource/-/-/-
+one/brown/ore vein/ore/resource/-/-/-
+one/brown/clay pit/clay or ore/resource/-/-/-
+one/brown/timber yard/stone or wood/resource/1 gold/-/-
+one/grey/loom/silk/resource/-/-/-
+one/brown/forest cave/wood or ore/1 gold/-/-/-
+one/grey/glassworks/glass/-/-/-/-
+one/blue/baths/-/victory point/stone/aqueduct/-
+one/grey/press/papyrus/resource/-/-/-
+one/blue/altar/-/victory point/-/temple/-
+one/red/stockade/1 military/military point/wood/-/-
+one/blue/theater/-/victory point/-/statue/-
+one/red/barracks/1 military/military point/ore/-/-
+one/red/gaurd tower/1 military/military point/clay/-/-
+one/green/apothecary/mathematics/science point/silk/stables, dispensary/-
+one/green/workshop/gear/science point/glass/laboratory, archery range/-
+one/yellow/marketplace/-/1 gold per glass silk papyrus/-/caravansery/1,2
+one/yellow/east trading post/-/1 gold per clay stone wood ore/-/forum/1
+one/yellow/west trading post/-/1gold per clay stone wood ore/-/forum/2
+One/green/scriptorium/literature/science point/papyrus/courthouse,library/-
+three/yellow/lighthouse/-/1 gold and 1 victory point for gold cards/glassworks stone/-/0
+three/yellow/haven/-/1 gold and 1 victory point for brown cards/silk lumber silver/-/0
+three/yellow/arena/-/3 gold and 1 victory point for final wonder stage/silver stone stone/-/0
+three/red/arsenal/3 military/ military points/silk silver lumber lumber/-/0
+three/red/fortifications/3 military/ military points/stone silver silver silver/-/0
+three/red/siege workshop/3 military/ military points/lumber clay clay clay/-/0
+three/green/study/-/science credit/silk papyrus lumber/-/0
+three/green/academy/-/mathematics credit/glassworks stone stone stone/-/0
+two/blue/temple/-/3 victory point/wood brick glass/pantheon/-
+two/brown/brickyard/brick brick/resource/1 gold/-/-
+two/brown/sawmill/wood wood/resource/1 gold/-/-
+two/red/walls/army army/military points/stone stone stone/-/-
+two/brown/quarry/stone stone/resource/1 gold/-/-
+two/yellow/vineyard/-/1 gold for every brown card/-/-/3
+two/yellow/forum/glass or silk or papyrus/choose one resource/stone stone/haven/-
+two/yellow/caravansery/wood or stone or rock or brick/choose one resource/wood wood/lighthouse/-
+two/red/archery range/2 military/military points/wood wood ore/-/-
 
