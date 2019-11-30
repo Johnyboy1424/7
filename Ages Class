@@ -9,12 +9,13 @@ public class Ages
 	private int turn;
 	private Deck deck;
 	private ArrayList<Player> players;
+	private ArrayList<Card> ageDeck;
 	private static ArrayList<Object> gameState;
 	private ArrayList<ArrayList<Cards>> visibleArray;
 	
 	  public Ages() throws IOException
 	  {
-		age = 0;
+	    age = 0;
 	    round = 0;
 	    turn = 0;
 	    reversed = true;
@@ -31,15 +32,18 @@ public class Ages
 		else
 			turn++;
 		}
-	else
-	{
+	  else
+	  {
 		if(turn = 0)
 			turn = 3;
 		else
 			turn--;
-	}
+	  }
 	  }
 	  
+	  public void switchRounds()
+	  {
+	  	
 	  public String checkWin()
 	  {
 	  	int x = players.get(0).getScore();
@@ -58,16 +62,24 @@ public class Ages
 	  public void nextAge()
 	  {
 		 age++;
+		 ageDeck = deck.getAge(age);
+		 for(Player p : players)
+		 {
+		 	for(int i = 0; i < 7 i++)
+			{
+				p.addToHand(ageDeck.remove(0));
+			}
+		}
 	  	 reversed = !reversed;
 	}
 	  public void drawnCard()
 	  {
 	  	
 	  }
-  
+	  
 	  public Player getCurrentPlayer()
 	  {
-		  return players.get(0);
+		  return players.get(turn);
 	  }
 	  
 	  public static ArrayList<Object> getGameState()
