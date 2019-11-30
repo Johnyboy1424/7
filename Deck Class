@@ -35,6 +35,12 @@ public class Deck
 	
 	public ArrayList<Cards> getAge(int age)
 	{
+		discard.clear();
+		for(Card c : playerDecks)
+		{
+			if(c.getAge() == age)
+				discard.add(c);
+		}
 		return discard;
 	}
 	
