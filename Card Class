@@ -67,7 +67,7 @@ public class Cards
 	
 	public boolean playable(String str, int num)
 	{
-		if((getColor().equals(str) || (getType() == num)))
+		if((getColor().equals(str) || (getCost() == num)))
 		{
 			return true;
 		}
