@@ -20,7 +20,9 @@ public class Ages
 	  
 	  public void switchTurns()
 	  {
-	  
+	  	Player temp = player.get(0);
+		player.set(0, player.get(1));
+		player.set(1, temp);
 	  }
 	  
 	  public String checkWin()
