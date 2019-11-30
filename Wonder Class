@@ -17,4 +17,9 @@ public class Wonder
 		stagesActivated++;
 	}
 	
+	public void stageFunctions()
+	{
+		if(name.equals(""))
+	}
+	
 }
