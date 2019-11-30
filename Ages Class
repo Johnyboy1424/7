@@ -4,7 +4,9 @@ import java.util.ArrayList;
 public class Ages 
 {
 	private int age;
+	private Boolean reversed;
 	private int round;
+	private int turn;
 	private Deck deck;
 	private ArrayList<Player> players;
 	private static ArrayList<Object> gameState;
@@ -14,15 +16,28 @@ public class Ages
 	  {
 		age = 0;
 	    round = 0;
+	    turn = 0;
+	    reversed = true;
 	    deck = new Deck();
 	    players = new ArrayList<>();
 	  }
 	  
 	  public void switchTurns()
 	  {
-	  	Player temp = player.get(0);
-		player.set(0, player.get(1));
-		player.set(1, temp);
+	  if(!reversed)
+	 	 {
+	  	if(turn = 2)
+			turn = 0;
+		else
+			turn++;
+		}
+	else
+	{
+		if(turn = 0)
+			turn = 3;
+		else
+			turn--;
+	}
 	  }
 	  
 	  public String checkWin()
@@ -40,6 +55,11 @@ public class Ages
 	    return p;
 	  }
 	  
+	  public void nextAge()
+	  {
+		 age++;
+	  	 reversed = !reversed;
+	}
 	  public void drawnCard()
 	  {
 	  	
