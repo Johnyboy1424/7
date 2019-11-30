@@ -36,10 +36,10 @@ public class Deck
 	public ArrayList<Cards> getAge(int age)
 	{
 		discard.clear();
-		for(Card c : playerDecks)
+		for(int i = playerDecks.size()-1; i > -1; i--)
 		{
-			if(c.getAge() == age)
-				discard.add(c);
+			if(playerDecks.get(i).getAge() == age)
+				discard.add(playerDecks.remove(i));
 		}
 		return discard;
 	}
