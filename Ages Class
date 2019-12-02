@@ -63,6 +63,7 @@ public class Ages
 	  {
 		 age++;
 		 ageDeck = deck.getAge(age);
+		 Collections.shuffle(ageDeck);
 		 for(Player p : players)
 		 {
 		 	for(int i = 0; i < 7 i++)
