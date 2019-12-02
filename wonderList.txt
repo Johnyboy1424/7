@@ -1,15 +1,7 @@
-Abu-Simbel A
-Alexandria B
-Babylon A
-Byzantium E
-Catan E
-Ephesos B
-Giza B
-Great-Wall E
-Halicarnassos A
-Mannekin-Pis E
-Olympia B
-Petra A
-Rhodos B
-Roma E
-Stonehenge A
+Halikarnassos/1 silk/2 brick/3v/3 ore/choose discard/2 silk/7v
+Gizah/1 stone/2 stone/3v/3 wood/5v/4 stone/7v
+Alexandria/1 glass/2 stone/3v/2 ore/1brick or one ore or one wood or one stone/2 glass/7vc
+Olympia/1 wood/2 wood/3v/2 stone/ignore build cost one card per age/ 2 ore/7v
+Ephesos/1 papyrus/2 stone/3v/2 wood/9g/2 papyrus/7v
+Babylon/1 brick/2 brick/3v/3 wood/1 science choice/4 brick/7v
+Rhodos/1 ore/2 wood/3v/3 brick/2m/4 ore/7v
