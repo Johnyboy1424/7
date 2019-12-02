@@ -22,3 +22,30 @@ public class SwitchStatements
 		
 	}
 }
+
+public void performCardSpecial(int counter)
+	{	
+		switch(discardPile.get(discardPile.size() - 1).getCardNum())
+		{
+		//reverse
+		case 10:
+			reverse(counter);
+			break;
+		//plus 2
+		case 11:
+			plus2(counter);
+			break;
+		//skip
+		case 12:
+			skip(counter);
+			break;
+		//wild
+		case 13:
+			wild();
+			break;
+		//wild plus 4
+		case 14:
+			wildPlusFour(counter);
+			break;
+		}	
+	}
