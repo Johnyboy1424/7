@@ -3,8 +3,9 @@ public class Wonder
 	private String name;
 	private int stagesActivated;
 	private String function;
+	private String version;
 	
-	public Wonder(String name)
+	public Wonder(String name, String resource, String firstFunction, String cost1, String secondFunction, String cost2, String thirdFunction, String cost3)
 	{
 		this.name = name;
 		stagesActivated = 0;
@@ -17,9 +18,5 @@ public class Wonder
 		stagesActivated++;
 	}
 	
-	public void stageFunctions()
-	{
-		if(name.equals(""))
-	}
-	
 }
+
