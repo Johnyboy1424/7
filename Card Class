@@ -65,9 +65,9 @@ public class Cards
 		return freeChain;
 	}
 	
-	public boolean playable(String str, int num)
+	public boolean playable(int num)
 	{
-		if((getColor().equals(str) || (getCost() == num)))
+		if((getCost() == num))
 		{
 			return true;
 		}
@@ -82,5 +82,7 @@ public class Cards
 	{
 		return age+" "+function+" "+name+" "+cost+" "+free+" "+freeChain+" "+color+" "+scope;
 	}
+	
+	
 	
 }
