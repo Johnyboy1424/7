@@ -1,51 +1,94 @@
-package sevenWonders;
-
-import java.io.*;
-import java.util.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 public class Deck 
 {
 	private ArrayList<Cards> discard;
-	private ArrayList<Cards> playerDecks;
+	private ArrayList<Cards> deck;
+	private ArrayList<Cards> age1;
+	private ArrayList<Cards> age2; 
+	private ArrayList<Cards> age3;
 	
-	private Map<Integer, ArrayList<Cards>> decks;
-	
-	public Deck() throws IOException
+	public Deck() 
 	{
-		Scanner keyboard = new Scanner(new File("SevenWondersInput.txt"));
-		playerDecks = new ArrayList<Cards>();
-		String[] info = new String[8];
-		for(int x = 0;x<39;x++)
+		discard = new ArrayList<Cards>();
+		deck = new ArrayList<Cards>();
+		age1 = new ArrayList<Cards>();
+		age2 = new ArrayList<Cards>();
+		age3 = new ArrayList<Cards>();
+	}
+	
+	public void ageCreator()
+	{
+		for(int counter = 0; counter < deck.size(); counter++)
 		{
-			//String age, String function, String name, String cost, String free, String freeChain, String color, String scope
-			String one = keyboard.nextLine();
-			info = one.split("/");
-			String age = info[0];
-			String function = info[1];
-			String name = info[2];
-			String cost = info[3];
-			String free = info[4];
-			String freeChain = info[5];
-			String color = info[6];
-			String scope = info[7];
-			Cards temp = new Cards(age, function, name, cost, free, freeChain, color, scope);
-			playerDecks.add(temp);
+			if(Integer.parseInt(deck.get(counter).getAge()) == 1)
+				age1.add(deck.get(counter));
+			
+			else if (Integer.parseInt(deck.get(counter).getAge()) == 2)
+				age2.add(deck.get(counter));
+			
+			else if(Integer.parseInt(deck.get(counter).getAge()) == 3)
+				age3.add(deck.get(counter));
 		}
 	}
 	
 	public ArrayList<Cards> getAge(int age)
 	{
-		discard.clear();
-		for(int i = playerDecks.size()-1; i > -1; i--)
-		{
-			if(playerDecks.get(i).getAge() == age)
-				discard.add(playerDecks.remove(i));
-		}
 		return discard;
 	}
 	
-	public Cards getCard(int x)
+	public Cards draw(int x)
 	{
-		return playerDecks.get(x);
+		discard.add(deck.get(x));
+		return deck.remove(x);
+	}
+	
+	public Cards drawFromAge(int age, int x)
+	{
+		discard.add(deck.get(x));
+		switch(age)
+		{
+		case 1:
+			return age1.remove(x);
+		case 2:
+			return age2.remove(x);
+		case 3:
+			return age3.remove(x);
+		}
+		return null;
+	}
+	
+	public Deck getAgeDeck(int ageNum)
+	{
+		Deck agex = new Deck();
+		agex.deckClear();
+		for(int counter = 0; counter < deck.size(); counter++)
+		{
+			if(Integer.parseInt(deck.get(counter).getAge()) == ageNum)
+			{
+				agex.addCard(deck.get(counter));
+			}
+		}
+		return agex;
+	}
+	
+	public void deckShuffle()
+	{
+		Collections.shuffle(deck);
+	}
+	
+	public void addCard(Cards x)
+	{
+		deck.add(x);
+	}
+	
+	public void setDeck(ArrayList<Cards> x)
+	{
+		deck = x;
+	}
+	
+	public void deckClear()
+	{
+		deck = null;
 	}
 }
