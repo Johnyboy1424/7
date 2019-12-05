@@ -1,18 +1,18 @@
 public void setFunction(Card one)
 {
-	 Switch()
+	Switch()
    {
     case "lumber yard":
         addResource("w",1);
         break;
     case "stone put" :
-    		addResource("s",1);
+    	addResource("s",1);
         break;
     case "clay pool ":
-    		addResource("c",1);
+    	addResource("c",1);
         break;
     case "ore vein":
-    		addResource("o",1);
+    	addResource("o",1);
         break;
     case "clay pit":
         addResource("b/o",1);
@@ -41,7 +41,7 @@ public void setFunction(Card one)
     case "stockade":
        addMilitary(1);
        break;
-    case "theater"
+    case "theater":
        addPoints(2);
        break;
     case "barracks":
