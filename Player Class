@@ -89,7 +89,38 @@ public class Player
 	{
 		return playerWonder;
 	}
-	
+	public int getNumWood()
+	{
+		return numWood;
+	}
+	public int getNumSilk()
+	{
+		return numSilk;
+	}
+	public int getNumGold()
+	{
+		return numGold;
+	}
+	public int getNumOre()
+	{
+		return numOre;
+	}
+	public int getNumClay()
+	{
+		return numClay;
+	}
+	public int getNumWood()
+	{
+		return numWood;
+	}
+	public int getNumPapyrus()
+	{
+		return numPapyrus;
+	}
+	public int getNumGlass()
+	{
+		return numGlass;
+	}
 	public int calcPoints()
 	{
 		//creates points and immediately takes the amount of coins and transfers it to points
