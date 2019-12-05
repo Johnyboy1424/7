@@ -1,95 +1,148 @@
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Collections;
 
 public class Ages 
 {
+	private int n;
 	private int age;
-	private Boolean reversed;
-	private int round;
-	private int turn;
 	private Deck deck;
 	private ArrayList<Player> players;
-	private ArrayList<Card> ageDeck;
-	private static ArrayList<Object> gameState;
+	private ArrayList<Object> gameState;
 	private ArrayList<ArrayList<Cards>> visibleArray;
+	private ArrayList<Wonder> wonders;
+	private Scanner input;
+	private boolean direction;
 	
-	  public Ages() throws IOException
-	  {
-	    age = 0;
-	    round = 0;
-	    turn = 0;
-	    reversed = true;
-	    deck = new Deck();
-	    players = new ArrayList<>();
-	  }
-	  
-	  public void switchTurns()
-	  {
-	  if(!reversed)
-	 	 {
-	  	if(turn = 2)
-			turn = 0;
-		else
-			turn++;
-		}
-	  else
-	  {
-		if(turn = 0)
-			turn = 3;
-		else
-			turn--;
-	  }
-	  }
-	  
-	  public void switchRounds()
-	  {
-	  	
-	  public String checkWin()
-	  {
-	  	int x = players.get(0).getScore();
-	    String p = players.get(0).getName();
-	    for(int counter = 0; counter < players.size() - 1; counter++)
-		{
-		  if(players.get(counter + 1).getScore() > x)
-		  {
-	        x = players.get(counter + 1).getScore();
-	        p = players.get(x).getName();
-		  }
-		}	    
-	    return p;
-	  }
-	  
-	  public void nextAge()
-	  {
-		 age++;
-		 ageDeck = deck.getAge(age);
-		 for(Player p : players)
+	 public Ages() 
+	 {
+		n = 1;
+		age = 1;
+		deck = new Deck();
+		players = new ArrayList<Player>();
+		wonders = new ArrayList<Wonder>();
+		visibleArray = new ArrayList<ArrayList<Cards>>();
+		input = new Scanner(System.in);
+		gameState = new ArrayList<Object>();
+		direction = false;
+	 }
+	 
+	 public void setWonderArray(ArrayList<Wonder> x)
+	 {
+		 wonders = x;
+	 }
+	 
+	 public void setDeck(Deck x)
+	 {
+		 deck = x;
+	 }
+	
+	 //sets the game up by giving each player their cards, wonder, and name
+	 public void setGameUp()
+	 {
+		 deck.deckShuffle();
+		 Collections.shuffle(wonders);
+		 deck.ageCreator();
+		 for(int counter = 0; counter < 3; counter++)	
 		 {
-		 	for(int i = 0; i < 7 i++)
-			{
-				p.addToHand(ageDeck.remove(0));
-			}
-		}
-	  	 reversed = !reversed;
-	}
-	  public void drawnCard()
-	  {
-	  	
-	  }
+	     	players.add(new Player());
+		    players.get(counter).setName(String.valueOf(counter));
+			players.get(counter).setWonder(wonders.get(counter));
+			fillVisibleArray(n);
+		 }
+	 }  
 	  
-	  public Player getCurrentPlayer()
-	  {
-		  return players.get(turn);
-	  }
+	 public void playGame()
+	 {
+		 setGameUp();
+		 for(age = 1; age <= 3; age++)
+		 {
+			 for(int n = 0; n < 7; n++)
+			 {
+				 for(int counter = 0; counter < players.size(); counter++)
+				 {
+					 System.out.println("\nPlayer " + players.get(counter).getName() + ":");
+					 for(int i = 0; i < visibleArray.get(2).size(); i++)
+					 { 
+						 System.out.println(i + ". " + visibleArray.get(counter).get(i).getName() + " " + visibleArray.get(counter).get(i).getAge());
+					 }
+					 System.out.println("Choose a card by typing the number.");
+					 chooseCard(counter);
+					 System.out.println(visibleArray.get(counter).size());
+				 }
+				 swapArrays();
+			 }
+			 changeDirection();
+			 
+			 for(int thing = 0; thing < players.size(); thing++)
+				 fillVisibleArray(n);
+			 
+			
+		 }
+	 }
+	 
+	 public void chooseCard(int n)
+	 {
+		 int x = input.nextInt();
+		 players.get(n).addToHand(visibleArray.get(n).remove(x));
+	 }
+	 
+	 public void swapArrays()
+	 {
+		 if(direction == false)
+		 {
+			 ArrayList<Cards> tempAry = visibleArray.get(0);
+			 visibleArray.set(0, visibleArray.get(2));
+			 visibleArray.set(2, visibleArray.get(1));
+			 visibleArray.set(1, tempAry);
+		 }
+		 else
+		 {
+			 ArrayList<Cards> tempAry = visibleArray.get(0);
+			 visibleArray.set(0, visibleArray.get(1));
+			 visibleArray.set(1, visibleArray.get(2));
+			 visibleArray.set(2, tempAry);
+		 }
+	 }
+	 
+	 public void fillVisibleArray(int age)
+	 {
+		 ArrayList<Cards> tempAry = new ArrayList<Cards>();
+		 if(age < 4)
+			 for(int i = 0; i < 7; i++)
+			 {
+				 tempAry.add(deck.drawFromAge(1, 0));
+			 }
+		 else if(age < 7 && age >= 4)
+			 for(int i = 0; i < 7; i++)
+			 {
+				 tempAry.add(deck.drawFromAge(2, 0));
+			 }
+		 else if(age < 10 && age >= 7)
+			 for(int i = 0; i < 7; i++)
+			 {
+				 tempAry.add(deck.drawFromAge(3, 0));
+			 }
+		 if(n < 12)
+			 n++;
+		 System.out.println(n);
+		 System.out.println(tempAry.get(0).getName()+  " " + tempAry.get(1).getName()+ " "+ tempAry.get(2).getName() + " "+tempAry.get(3).getName());
+		 visibleArray.add(0, tempAry);
+	 }
+	 
+	 public void changeDirection()
+	 {
+		 direction = !direction;
+	 }
+	 
+	 public ArrayList<Object> getGameState()
+	 {
+		 return gameState;
+	 }
+	 
+	 public void burnCard(int player)
+	 {
+		 
+	 }
 	  
-	  public static ArrayList<Object> getGameState()
-	  {
-		  return gameState;
-	  }
-
-	public static void set() 
-	{
-		// TODO Auto-generated method stub
-		
-	}
- }
+}
