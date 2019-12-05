@@ -10,11 +10,26 @@ public class Player
 	private int warPoints;
 	private String name;
 	private Wonder playerWonder;
+	int numWood;
+	int numStone;
+	int numClay;
+	int numGlass;
+	int numOre;
+	int numSilk;
+	int numPapyrus;
+	int numGold;
 	
 	//constructor
 	Player(String name, Wonder playerWonder)
 	{
 		coins = 0;
+		numWood = 0;
+		numClay = 0
+		numStone = 0;
+		numGlass = 0;
+		numOre = 0;
+		numSilk = 0;
+		numPapyrus = 0;
 		this.name = name;
 		score = 0;
 		hand = new ArrayList<Cards>();
@@ -27,7 +42,34 @@ public class Player
 	{
 		return score;
 	}
-	
+	public void addWood(int num)
+	{
+		numWood+=num;
+	}
+	public void addStone(int num)
+	{
+		numStone+=num;
+	}
+	public void addClay(int num)
+	{
+		numClay+=num;
+	}
+	public void addOre(int num)
+	{
+		numOre+=num;
+	}
+	public void addSilk(int num)
+	{
+		numSilk+=num;
+	}
+	public void addPapyrus(int num)
+	{
+		numPapyrus+=num;
+	}
+	public void addGold(int num)
+	{
+		numGold+=num;
+	}
 	public void addScore(int x)
 	{
 		score += x;
