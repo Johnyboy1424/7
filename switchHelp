@@ -1,51 +1,214 @@
-package testStuff;
-
-public class SwitchStatements 
+public void setFunction(Card one)
 {
-	public static void main(String args[])
-	{
-		String[] s = new String[4];
-		int x = 1;
-		s[0] = "f";
-		s[1] = "r";
-		switch(s[x])
-		{
-		case "f":
-			System.out.println("LLL");
-			break;
-		case "r":
-			System.out.println("SfSD");
-			break;
-		case
-		
-		}
-		
-	}
-}
+	 Switch()
+   {
+    case "lumber yard":
+        addResource("w",1);
+        break;
+    case "stone put" :
+    		addResource("s",1);
+        break;
+    case "clay pool ":
+    		addResource("c",1);
+        break;
+    case "ore vein":
+    		addResource("o",1);
+        break;
+    case "clay pit":
+        addResource("b/o",1);
+        break;
+    case "timber yard":
+        addResource("s/w",1);
+        break;
+    case "loom":
+        addResource("si",1);
+        break;
+    case "forest cave":
+        addResource("w/o",1);
+        break;
+    case "glassworks":
+       addResource("g",1);
+       break;
+    case "baths":
+        addPoints(3);
+        break;
+    case "press":
+        addResource("p",1);
+        break;
+    case "altar":
+      addPoints(1);
+      break;
+    case "stockade":
+       addMilitary(1);
+       break;
+    case "theater"
+       addPoints(2);
+       break;
+    case "barracks":
+      addMilitary(1);
+      break;
+    case "guard tower":
+       addMilitary(1);
+       break;
+    case "apothecary":
+     	addScience("math",1);
+     	break;
+    case "workshop":
+       addScience("gear",1);
+       break
+    case "marketplace"
+       
+    case "east trading post"
+    case "west trading post"
+    case "scriptorium"
+    case "lighthouse"
+    case "haven"
+    case "arena":
+    		addPoint();
+        break;
+    case "arsenal":
+    	addMilitary(3);
+        break;
+    case "fortification":
+    	addMilitary(3);
+        break;
+    case "siege workshop":
+    	addMilitary(3);
+        break;
+    case "study":
+    	addScience("science",1);
+        break;
+    case "academy":
+    	addScience("math",1);// adds pionts for science
+        break;
+    case "temple":
+    	addPoints(3);//adds victory points
+        break;
+    case "brickyard":
+    	addResource("b",2);//adds resource
+        break;
+    case "sawmill":
+    	addResource("w",2);//adds resource
+        break;
+    case "walls":
+    	addMilitary(2);// adds military points
+        break;
+    case "quarry":
+    		addResource("s",2);
+        break;
+    case "vineyard":
+    	addPoints(getNumCards("brown"));
+        break;
+    case "forum":
+    	addResource("g/s/p",1)
+        break;
+    case "carvanery":  
+    	addResource("w/s/o/b",1);
+        break;
+    case "archery range":
+       	addMilitary(2);
+        break;
+   }
+  /* one/brown/lumber yard/wood/resource/-/-/-
+one/brown/stone put/stone/resource/-/-/-
+one/brown/clay pool/clay/resource/-/-/-
+one/brown/ore vein/ore/resource/-/-/-
+one/brown/clay pit/clay or ore/resource/-/-/-
+one/brown/timber yard/stone or wood/resource/1 gold/-/-
+one/grey/loom/silk/resource/-/-/-
+one/brown/forest cave/wood or ore/1 gold/-/-/-
+one/grey/glassworks/glass/-/-/-/-
+one/blue/baths/-/victory point/stone/aqueduct/-
+one/grey/press/papyrus/resource/-/-/-
+one/blue/altar/-/victory point/-/temple/-
+one/red/stockade/1 military/military point/wood/-/-
+one/blue/theater/-/victory point/-/statue/-
+one/red/barracks/1 military/military point/ore/-/-
+one/red/gaurd tower/1 military/military point/clay/-/-
+one/green/apothecary/mathematics/science point/silk/stables, dispensary/-
+one/green/workshop/gear/science point/glass/laboratory, archery range/-
+one/yellow/marketplace/-/1 gold per glass silk papyrus/-/caravansery/1,2
+one/yellow/east trading post/-/1 gold per clay stone wood ore/-/forum/1
+one/yellow/west trading post/-/1gold per clay stone wood ore/-/forum/2
+one/green/scriptorium/literature/science point/papyrus/courthouse,library/-
+three/yellow/lighthouse/-/1 gold and 1 victory point for gold cards/glassworks stone/-/0
+three/yellow/haven/-/1 gold and 1 victory point for brown cards/silk lumber silver/-/0
+three/yellow/arena/-/3 gold and 1 victory point for final wonder stage/silver stone stone/-/0
+three/red/arsenal/3 military/ military points/silk silver lumber lumber/-/0
+three/red/fortifications/3 military/ military points/stone silver silver silver/-/0
+three/red/siege workshop/3 military/ military points/lumber clay clay clay/-/0
+three/green/study/-/science credit/silk papyrus lumber/-/0
+three/green/academy/-/mathematics credit/glassworks stone stone stone/-/0
+two/blue/temple/-/3 victory point/wood brick glass/pantheon/-
+two/brown/brickyard/brick brick/resource/1 gold/-/-
+two/brown/sawmill/wood wood/resource/1 gold/-/-
+two/red/walls/army army/military points/stone stone stone/-/-
+two/brown/quarry/stone stone/resource/1 gold/-/-
+two/yellow/vineyard/-/1 gold for every brown card/-/-/3
+two/yellow/forum/glass or silk or papyrus/choose one resource/stone stone/haven/-
+two/yellow/caravansery/wood or stone or rock or brick/choose one resource/wood wood/lighthouse/-
+two/red/archery range/2 military/military points/wood wood ore/-/-
+  
 
-public void performCardSpecial(int counter)
-	{	
-		switch(discardPile.get(discardPile.size() - 1).getCardNum())
-		{
-		//reverse
-		case 10:
-			reverse(counter);
-			break;
-		//plus 2
-		case 11:
-			plus2(counter);
-			break;
-		//skip
-		case 12:
-			skip(counter);
-			break;
-		//wild
-		case 13:
-			wild();
-			break;
-		//wild plus 4
-		case 14:
-			wildPlusFour(counter);
-			break;
-		}	
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   */
+}
+public void addResource(String theResource, int num)
+{
+		int cap;
+    int playerX;
+		//make an int for every resource make accessors and modifyers for all of dem
+		if(theResource.indexOf("/") == -1)
+    	if(theResource.charAt(0) == 'w')
+			{
+				players[playerX].addWood(num);
+			}
+      if(theResource.charAt(0) == 's')
+      {
+      	if(theResource.charAt(1) == 'i')
+        	{
+          	players[playerX].addSilk(num);
+          }
+      	else
+      		players[playerX].addStone(num);
+      }
+      if(theResource.charAt(0)=='c')
+      {
+      	players[playerX].addClay(num);
+      }
+      if(theResource.charAt(0)=='o')
+      {
+      	players[playerX].addOre(num);
+      }
+      if(theResource.charAt(0) == 'g')
+      {
+      	players[playerX].addGold(num);//add addGold() method to the player class
+      }
+      else
+      	System.out.print("cat")
+}
+public void addMilitary(int num,plyerX)
+{
+	player[playerX].addMilitaryPoints(num);
+}
+public void addScience(String type,int num)
+{
+	player[playerX].addScience(type, num);
+}
