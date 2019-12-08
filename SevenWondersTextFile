@@ -38,3 +38,77 @@ two/yellow/forum/glass or silk or papyrus/choose one resource/stone stone/haven/
 two/yellow/caravansery/wood or stone or rock or brick/choose one resource/wood wood/lighthouse/-
 two/red/archery range/2 military/military points/wood wood ore/-/-
 
+
+
+
+1/brown/lumber yard/wood/resource/-/-/-
+1/brown/stone put/stone/resource/-/-/-
+1/brown/clay pool/clay/resource/-/-/-
+1/brown/ore vein/ore/resource/-/-/-
+1/brown/clay pit/clay or ore/resource/-/-/-
+1/brown/timber yard/stone or wood/resource/1 gold/-/-
+1/brown/forest cave/wood or ore/1 gold/-/-/-
+1/grey/loom/silk/resource/-/-/-
+1/grey/glassworks/glass/resource/-/-/-
+1/grey/press/papyrus/resource/-/-/-
+1/blue/baths/-/victory point/stone/aqueduct/-
+1/blue/altar/-/victory point/-/temple/-
+1/blue/theater/-/victory point/-/statue/-
+1/red/stockade/1 military/military point/wood/-/-
+1/red/barracks/1 military/military point/ore/-/-
+1/red/guard tower/1 military/military point/clay/-/-
+1/green/apothecary/mathematics/science point/silk/stables, dispensary/-
+1/green/workshop/gear/science point/glass/laboratory, archery range/-
+1/green/scriptorium/literature/science point/papyrus/courthouse,library/-
+1/yellow/marketplace/-/1 gold per glass silk papyrus/-/caravansery/1,2
+1/yellow/east trading post/-/1 gold per clay stone wood ore/-/forum/1
+1/yellow/west trading post/-/1gold per clay stone wood ore/-/forum/2
+
+2/brown/quarry/stone stone/resource/1 gold/-/-
+2/brown/brickyard/brick brick/resource/1 gold/-/-
+2/brown/sawmill/wood wood/resource/1 gold/-/-
+2/brown/foundry/ore ore/resource/1 gold/-/-
+2/grey/loom/silk/resource/-/-/-
+2/grey/glassworks/glass/resource/-/-/-
+2/grey/press/papyrus/resource/-/-/-
+2/blue/temple/-/3 victory point/wood brick glass/pantheon/-
+2/blue/aqueduct/-/5 victory point/stone stone stone/-/-
+2/blue/courthouse/-/4 victory point/clay clay silk/-/-
+2/blue/statue/-/4 victory point/ ore ore wood/-/-
+2/red/walls/2 military/2 military points/stone stone stone/fortifications/-
+2/red/archery range/2 military/military points/wood wood ore/-/-
+2/red/stables/2 military/military points/clay wood ore/-/-
+2/yellow/vineyard/-/1 gold for every brown card/-/-/3
+2/yellow/forum/glass or silk or papyrus/choose one resource/stone stone/haven/-
+2/yellow/caravansery/wood or stone or rock or brick/choose one resource/wood wood/lighthouse/-
+2/green/library/literature/science point/stone stone silk/senate university/-
+2/green/school/literature/science point/wood papyrus/academy study/-
+2/green/laboratory/gear/science point/clay clay papyrus/observatory siege workshop/-
+2/green/dispensary/mathematics/science point/ore ore glass/lodge arena/-
+
+3/yellow/lighthouse/-/1 gold and 1 victory point for gold cards/glassworks stone/-/0
+3/yellow/haven/-/1 gold and 1 victory point for brown cards/silk lumber silver/-/0
+3/yellow/arena/-/3 gold and 1 victory point for final wonder stage/silver stone stone/-/0
+3/red/arsenal/3 military/ military points/silk silver lumber lumber/-/-
+3/red/fortifications/3 military/ military points/stone silver silver silver/-/-
+3/red/siege workshop/3 military/ military points/lumber clay clay clay/-/-
+3/green/study/science credit/silk papyrus lumber/-/-
+3/green/academy/-/mathematics credit/glassworks stone stone stone/-/-
+3/green/university/literature/science point/wood wood papyrus glass/-/-
+3/green/observatory/gear/science point/ore ore glass silk/-/-
+3/green/lodge/mathematics/science point/clay clay papyrus silk/-/-
+3/blue/senate/-/6 victory point/wood wood stone ore/-/-
+3/blue/town hall/-/6 victory point/stone stone ore glass/-/-
+3/blue/gardens/-/5 victory point/clay clay wood/-/-
+3/blue/pantheon/-/7 victory point/clay clay ore glass papyrus silk/-/-
+3/blue/palace/-/8 victory point/stone ore wood clay glass papyrus silk/-/-
+3/purple/strategists guild/guild/1 victory point per military loss/ore ore stone silk/-/1,2
+3/purple/philosophers guild/guild/1 point per green card/clay clay clay papyrus silk/-/1,2
+3/purple/craftsmen guild/guild/2 point per grey card/ore ore stone stone/-/1,2
+3/purple/magistrates guild/guild/1 point per blue card/wood wood wood stone silk/-/1,2
+3/purple/builders guild/guild/1 point per final wonder stage /stone stone clay clay glass/-/3
+3/purple/shipowners guild/guild/1 point per brown grey purple card/wood wood wood glass papyrus/-/0
+3/purple/scientists guild/mathematics or literature or gear/choose one science/wood wood ore ore papyrus/-/-
+3/purple/traders guild/guild/1 point per yellow card/glass silk papyrus/-/1,2
+3/purple/spies guild/guild/1 point per red card/clay clay clay glass/-/1,2
+3/purple/workers guild/guild/1 point per brown card/ore ore clay stone wood/-/1,2 
